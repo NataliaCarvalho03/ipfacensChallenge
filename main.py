@@ -7,8 +7,8 @@ from matching import compare_characters, draw_results
     
 
 if __name__ == '__main__':
-    image = cv2.imread('placa.jpg', cv2.IMREAD_GRAYSCALE)
-    color_image = cv2.imread('placa.jpg')
+    image = cv2.imread('images/placa.jpg', cv2.IMREAD_GRAYSCALE)
+    color_image = cv2.imread('images/placa.jpg')
     img = image.copy()
     plate_bbox, plate_roi = get_plate_bbox_and_roi(image)
     char_bboxes, char_rois = get_char_bboxes_and_rois(plate_roi, plate_bbox)

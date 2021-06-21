@@ -39,6 +39,8 @@ def get_plate_bbox_and_roi(image):
             #cv2.drawContours(image,[box],0,(0,0,255),2)
     plate_crop = image[np.amin(box[:,1]):np.amax(box[:,1]), np.amin(box[:,0]):np.amax(box[:,0])]
     image_roi[np.amin(box[:,1]):np.amax(box[:,1]), np.amin(box[:,0]):np.amax(box[:,0])] = plate_crop
+    cv2.imshow('Plate ROI', image_roi)
+    cv2.waitKey(0)
     return [box, image_roi]
 
 
@@ -63,4 +65,6 @@ def get_char_bboxes_and_rois(image, bbox):
             ret,crop = cv2.threshold(crop,175,255,cv2.THRESH_BINARY_INV)
             image_roi[np.amin(box[:,1]):np.amax(box[:,1]), np.amin(box[:,0]):np.amax(box[:,0])] = crop
             cv2.drawContours(image,[box],0,(0,0,255),2)
+    cv2.imshow('Chars ROI', image)
+    cv2.waitKey(0)
     return [boxes, image_roi]

@@ -4,6 +4,13 @@ O Desafio proposto tem por objetivo realizar a detecção e classificação dos 
 
 ![Image](images/placa.jpg)
 
+## Requerimentos
+
+- Python 3.8
+- OpenCV
+- Numpy
+- imutils
+
 ## Métodos e Resultados
 
 Para solucionar este problema, utilizei um conjunto de métodos heuristicos que permitiu realizar cada etapa do projeto de forma a obter a solução desejada. Abaixo detalho a metodologia utilizada em cada etapa:
